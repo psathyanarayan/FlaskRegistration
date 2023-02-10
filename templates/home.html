@@ -2,9 +2,18 @@
 <html>
 <head>
     <title>Online Event Registration</title>
+    <style>
+        .con{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to the Online Event</h1>
+    <div class="con">
+        <h1>Welcome to the Online Event</h1>
     <p>The event starts in {{ time_remaining.days }} days and {{ time_remaining.seconds // 3600 }} hours.</p>
     <h2>Event Schedule</h2>
     <ul>
@@ -13,5 +22,7 @@
         {% endfor %}
     </ul>
     <a href="/register">Register for the event</a>
+    </div>
+    
 </body>
 </html>
