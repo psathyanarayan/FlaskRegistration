@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Event Registration</title>
+</head>
+<body>
+    <h1>Welcome to the Online Event</h1>
+    <p>The event starts in {{ time_remaining.days }} days and {{ time_remaining.seconds // 3600 }} hours.</p>
+    <h2>Event Schedule</h2>
+    <ul>
+        {% for time, event in schedule %}
+            <li>{{ time }}: {{ event }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('register') }}">Register for the event</a>
+</body>
+</html>
